@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   typescript: {
-    // يتجاهل أخطاء الـ TypeScript أثناء البناء لكي لا يفشل الرفع
-    ignoreBuildErrors: true,
+    // لا نتجاهل أخطاء TypeScript أثناء البناء لكي لا نخفي مشاكل فعلية
+    ignoreBuildErrors: false,
   },
   eslint: {
-    // يتجاهل أخطاء الـ ESLint الفنية أثناء البناء
-    ignoreDuringBuilds: true,
+    // لا نتجاهل أخطاء ESLint أثناء البناء
+    ignoreDuringBuilds: false,
   },
 };
 
